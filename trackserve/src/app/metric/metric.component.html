@@ -1,0 +1,328 @@
+ <!--<div class="market-updates">
+			<div class="col-md-4 market-update-gd">
+				<div class="market-update-block clr-block-1">
+					<div class="col-md-8 market-update-left">
+						<h3>82 %</h3>
+						<h4>Cpu usage</h4>
+						<p>Average 20%   </p>
+					</div>
+					<div class="col-md-4 market-update-right">
+						<i class="fa fa-server"> </i>
+					</div>
+				  <div class="clearfix"> </div>
+				</div>
+			</div>
+			<div class="col-md-4 market-update-gd">
+				<div class="market-update-block clr-block-2">
+				 <div class="col-md-8 market-update-left">
+					<h3>40 %</h3>
+					<h4>Memory Usage</h4>
+					<p>Used memory 2330 mb/4300 mb</p>
+				  </div>
+					<div class="col-md-4 market-update-right">
+						<i class="glyphicon glyphicon-scale"> </i>
+					</div>
+				  <div class="clearfix"> </div>
+				</div>
+			</div>
+			<div class="col-md-4 market-update-gd">
+				<div class="market-update-block clr-block-3">
+					<div class="col-md-8 market-update-left">
+						<h3>Disk Space</h3>
+						<h4></h4>
+						<p>c: 200gb/300gb D: 132gb/300gb</p>
+					</div>
+					<div class="col-md-4 market-update-right">
+						<i class="fa fa-pie-chart"> </i>
+					</div>
+				  <div class="clearfix"> </div>
+				</div>
+			</div>
+		   <div class="clearfix"> </div>
+		</div>-->
+    
+    <div class="chit-chat-layer1">
+	<div class="col-md-6 chit-chat-layer1-left">
+               <div class="work-progres">
+                            <div class="chit-chat-heading">
+                                  Applications
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                  <thead>
+                                    <tr>
+                                      <th>#</th>
+                                      <th>Domain</th>
+                                                                        
+                                                                        
+                                      <th>Status</th>
+                                      <th>count</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>PSBOPR</td>
+                                                                   
+                                                             
+                                  <td><span class="label label-success">ok</span></td>
+                                   <td><a href=""><span class="badge badge-warning">0 warning 0 errors</span></a></td>
+                              </tr>
+                               <tr>
+                                  <td>2</td>
+                                  <td>PSBOPEPM</td>
+                                                                   
+                                                             
+                                  <td><span class="label label-danger">error</span></td>
+                                   <td><a href='#' (click)="openDialog('PSBOPEPM',$event)"><span class="badge badge-danger">3 warning 12 errors</span></a></td>
+                              </tr>
+                            
+                          </tbody>
+                      </table>
+                  </div>
+             </div>
+      
+     
+	  </div>
+	  
+	<div class="col-md-6 chit-chat-layer1-rit">
+               <div class="work-progres">
+                            <div class="chit-chat-heading">
+                                 Activity
+                            </div>
+                            <div class="row">
+ <div class="col-xs-12">
+     <form class="form-inline" #form="ngForm" (ngSubmit)="onSubmit(form.value)">
+  <div class="form-group">
+    <label for="text">Job/Process Name</label>
+    <input type="text" class="form-control" id="email" name="process" ngModel required>
+  </div>
+  
+<div class="form-group">
+  <label for="sel1">Select type</label>
+  <select class="form-control" id="sel1" name="type" ngModel required>
+    <option value="job">Job</option>
+    <option value="process">process</option>
+    
+  </select>
+</div>
+  
+  <button type="submit" class="btn btn-primary" [disabled]="!form.valid"> + Add Job</button>
+<!--  <div class="form-group" *ngIf="ss==1">
+  <label for="sel1" ><span class="glyphicon glyphicon-ok"></span></label>
+  </div>-->
+  
+</form>
+<table class="table table-hover">
+                                  <thead>
+                                    <tr>
+                                    
+									  <th>ProcessName</th>
+                                      <th>Type</th>
+                                                                        
+                                                                        
+                                      <th>Satus</th>
+                                     
+                                  </tr>
+                              </thead>
+                              <tbody >
+<tr *ngFor="let ob of obj">
+                                  <td>{{ob.process}}</td>
+                                  <td>{{ob.type}}</td>
+                                                                   
+                                                             
+                                  <td><span class="label label-success">ok</span></td>
+                                 
+                              </tr>
+
+                              </tbody>
+</table>
+ <div class="well" style="width: 100%;
+    padding: 7px 46px;">
+            <div style="overflow-y: scroll; overflow-x: hidden; height: 500px;">
+                <ul class="nav nav-list" >
+                    <li class="glyphicon glyphicon-plus-sign"><label class="tree-toggler nav-header">  Header 1</label>
+                        <ul class="nav nav-list tree">
+                            <li *ngFor="let c of children"><a href="" style="font-style:italic;text-decoration: underline;">processName: {{c.name}}  status:completed Time:{{c.time}}</a></li>
+                           
+                            <!--<li><label class="tree-toggler nav-header">Header 1.1</label>
+                                <ul class="nav nav-list tree">
+                                    <li><a href="#">Link</a></li>
+                                    <li><a href="#">Link</a></li>
+                                    <li><label class="tree-toggler nav-header">Header 1.1.1</label>
+                                        <ul class="nav nav-list tree">
+                                            <li><a href="#">Link</a></li>
+                                            <li><a href="#">Link</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>-->
+                        </ul>
+                    </li>
+                    </ul>
+                    </div>
+                    </div>
+ </div>
+                              <!--  <table class="table table-hover">
+                                  <thead>
+                                    <tr>
+                                      <th>#</th>
+									  <th>SERVER</th>
+                                      <th>CPU</th>
+                                                                        
+                                                                        
+                                      <th>MEMORY</th>
+                                      <th>DISK_DRIVE</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>PSBOPR</td>
+                                                                   
+                                                             
+                                  <td><span class="label label-success">ok</span></td>
+                                   <td><a href=""><span class="badge badge-warning">0 warning 0 errors</span></a></td>
+                              </tr>
+                               <tr>
+                                  <td>2</td>
+                                  <td>PSBOPEPM</td>
+                                                                   
+                                                             
+                                  <td><span class="label label-danger">error</span></td>
+                                   <td><span class="badge badge-danger">3 warning 12 errors</span></td>
+                              </tr>
+							   <tr>
+                                  <td>2</td>
+                                  <td>PSBOPEPM</td>
+                                                                   
+                                                             
+                                  <td><span class="label label-danger">error</span></td>
+                                   <td><span class="badge badge-danger">3 warning 12 errors</span></td>
+                              </tr>
+							  <tr>
+                                  <td>2</td>
+                                  <td>PSBOPEPM</td>
+                                                                   
+                                                             
+                                  <td><span class="label label-danger">error</span></td>
+                                   <td><span class="badge badge-danger">3 warning 12 errors</span></td>
+                              </tr><tr>
+                                  <td>2</td>
+                                  <td>PSBOPEPM</td>
+                                                                   
+                                                             
+                                  <td><span class="label label-danger">error</span></td>
+                                   <td><span class="badge badge-danger">3 warning 12 errors</span></td>
+                              </tr><tr>
+                                  <td>2</td>
+                                  <td>PSBOPEPM</td>
+                                                                   
+                                                             
+                                  <td><span class="label label-danger">error</span></td>
+                                   <td><span class="badge badge-danger">3 warning 12 errors</span></td>
+                              </tr><tr>
+                                  <td>2</td>
+                                  <td>PSBOPEPM</td>
+                                                                   
+                                                             
+                                  <td><span class="label label-danger">error</span></td>
+                                   <td><span class="badge badge-danger">3 warning 12 errors</span></td>
+                              </tr><tr>
+                                  <td>2</td>
+                                  <td>PSBOPEPM</td>
+                                                                   
+                                                             
+                                  <td><span class="label label-danger">error</span></td>
+                                   <td><span class="badge badge-danger">3 warning 12 errors</span></td>
+                              </tr><tr>
+                                  <td>2</td>
+                                  <td>PSBOPEPM</td>
+                                                                   
+                                                             
+                                  <td><span class="label label-danger">error</span></td>
+                                   <td><span class="badge badge-danger">3 warning 12 errors</span></td>
+                              </tr><tr>
+                                  <td>2</td>
+                                  <td>PSBOPEPM</td>
+                                                                   
+                                                             
+                                  <td><span class="label label-danger">error</span></td>
+                                   <td><span class="badge badge-danger">3 warning 12 errors</span></td>
+                              </tr><tr>
+                                  <td>2</td>
+                                  <td>PSBOPEPM</td>
+                                                                   
+                                                             
+                                  <td><span class="label label-danger">error</span></td>
+                                   <td><span class="badge badge-danger">3 warning 12 errors</span></td>
+                              </tr><tr>
+                                  <td>2</td>
+                                  <td>PSBOPEPM</td>
+                                                                   
+                                                             
+                                  <td><span class="label label-danger">error</span></td>
+                                   <td><span class="badge badge-danger">3 warning 12 errors</span></td>
+                              </tr><tr>
+                                  <td>2</td>
+                                  <td>PSBOPEPM</td>
+                                                                   
+                                                             
+                                  <td><span class="label label-danger">error</span></td>
+                                   <td><span class="badge badge-danger">3 warning 12 errors</span></td>
+                              </tr>
+                            
+                          </tbody>
+                      </table>-->
+                  </div>
+             </div>
+      </div>
+    </div>
+	 
+	<div class="chit-chat-layer1">
+	   
+	<div class="col-md-6 chit-chat-layer1-left">
+               <div class="work-progres">
+                            <div class="chit-chat-heading">
+                                  Server
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                  <thead>
+                                    <tr>
+                                      <th>#</th>
+									    <th>SERVER</th>
+                                      <th>CPU</th>
+                                                                        
+                                                                        
+                                      <th>MEMORY</th>
+                                      <th>DISK_DRIVE</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>PSBOPR</td>
+                                                                   
+                                                             
+                                  <td><span class="label label-success">ok</span></td>
+                                   <td><a href=""><span class="badge badge-warning">0 warning 0 errors</span></a></td>
+                              </tr>
+                               <tr>
+                                  <td>2</td>
+                                  <td>PSBOPEPM</td>
+                                                                   
+                                                             
+                                  <td><span class="label label-danger">error</span></td>
+                                   <td><span class="badge badge-danger">3 warning 12 errors</span></td>
+                              </tr>
+                            
+                          </tbody>
+                      </table>
+                  </div>
+             </div>
+      </div>
+	  </div>
+     <div class="clearfix"> </div>
+
+    

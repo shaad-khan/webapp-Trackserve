@@ -1,0 +1,57 @@
+.fa-server
+{
+    width: 80px;
+    color: #68ae00;
+    height: 68px;
+    background: #fff;
+    text-align: center;
+    border-radius: 49px;
+    -webkit-border-radius: 49px;
+    -moz-border-radius: 49px;
+    -o-border-radius: 49px;
+    line-height: 1.7em;
+    font-size: 3em;
+}
+.col-md-6 
+{
+        width: 101%;
+
+}
+.fa-pie-chart
+{
+    width: 80px;
+    color: #337ab7;
+    height: 68px;;
+    background: #fff;
+    text-align: center;
+    border-radius: 49px;
+    -webkit-border-radius: 49px;
+    -moz-border-radius: 49px;
+    -o-border-radius: 49px;
+    line-height: 1.7em;
+    font-size: 3em;
+}
+.glyphicon-scale
+{
+    width: 80px;
+    color: #fc8213;
+    height: 68px;
+    background: #fff;
+    text-align: center;
+    border-radius: 49px;
+    -webkit-border-radius: 49px;
+    -moz-border-radius: 49px;
+    -o-border-radius: 49px;
+    line-height: 1.7em;
+    font-size: 3em;
+}
+.clr-block-2
+{
+    height:140px;
+}
+.market-updates
+
+{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 87%;
+}

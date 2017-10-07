@@ -1,0 +1,103 @@
+<!--<div class="row ">
+  <div class="col-sm-4">
+    <div class="info-box">
+   
+      <h2 md-dialog-title>{{servername}}</h2>
+    </div>
+  </div>
+  <div class="col-sm-8 server">
+    <div class="info-box">
+     <md-dialog-actions class="close-bt">
+       <button type="button" class="close" aria-label="Close" md-button md-dialog-close>
+  <span aria-hidden="true" class="glyphicon glyphicon-remove"></span>
+</button>
+  
+</md-dialog-actions>
+    </div>
+  </div>
+</div>
+
+
+<md-dialog-content>
+ <div class="chit-chat-layer1">
+	<div class="col-md-12 chit-chat-layer1-left">
+               <div class="work-progres">
+                            <div class="chit-chat-heading">
+                                  Applications
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                  <thead>
+                                    <tr>
+                                      <th>#</th>
+                                      <th>Domain</th>
+                                                                        
+                                                                        
+                                      <th>Status</th>
+                                      <th>count</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>PSBOPR</td>
+                                                                   
+                                                             
+                                  <td><span class="label label-success">ok</span></td>
+                                   <td><a href=""><span class="badge badge-warning">0 warning 0 errors</span></a></td>
+                              </tr>
+                               <tr>
+                                  <td>2</td>
+                                  <td>PSBOPEPM</td>
+                                                                   
+                                                             
+                                  <td><span class="label label-danger">error</span></td>
+                                   <td><a href='#' (click)="openDialog('PSBOPEPM',$event)"><span class="badge badge-danger">3 warning 12 errors</span></a></td>
+                              </tr>
+                            
+                          </tbody>
+                      </table>
+                  </div>
+             </div>
+      
+     
+	  </div>
+    </div>
+
+
+
+
+
+
+</md-dialog-content>
+<!--<md-dialog-actions>
+  <button md-button md-dialog-close>No</button>
+  <!-- Can optionally provide a result for the closing dialog. 
+  <button md-button [md-dialog-close]="true">Yes</button>
+</md-dialog-actions>-->
+<div class="row">
+  <div class="col-md-6">
+    <div style="display: block;">
+    <canvas baseChart width="400" height="400"
+                [datasets]="lineChartData"
+                [labels]="lineChartLabels"
+                [options]="lineChartOptions"
+                [colors]="lineChartColors"
+                [legend]="lineChartLegend"
+                [chartType]="lineChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+    </div>
+  </div>
+  <div class="col-md-6" style="margin-bottom: 10px">
+    <table class="table table-responsive table-condensed">
+      <tr>
+        <th *ngFor="let label of lineChartLabels">{{label}}</th>
+      </tr>
+      <tr *ngFor="let d of lineChartData">
+        <td *ngFor="let label of lineChartLabels; let j=index">{{d && d.data[j]}}</td>
+      </tr>
+    </table>
+    <button (click)="randomize()">CLICK</button>
+  </div>
+</div>
